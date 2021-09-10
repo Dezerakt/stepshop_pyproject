@@ -1,5 +1,12 @@
 {% extends 'stepshop/base.html' %}
 {% load static %}
+
+{% block title %}Контакты{% endblock %}
+
+{% block css %}
+  <link rel="stylesheet" href="/static/stepshop/assets/css/flex-slider.css">
+{% endblock %}
+
 {% block content %}
     <!-- Page Content -->
     <!-- About Page Starts Here -->
@@ -68,4 +75,9 @@
       </div>
     </div>
     <!-- About Page Ends Here -->
+{% endblock %}
+
+{% block js %}
+  <script src="assets/js/isotope.js"></script>
+  <script src="/static/stepshop/assets/js/flex-slider.js"></script>
 {% endblock %}

@@ -1,12 +1,38 @@
 from django.shortcuts import render
 
+from mainapp.models import Product
+
+
 def index(request):
-    return render(request, 'stepshop/index.html')
+    title = 'главная'
+
+    products = Product.objects.all()[:4]
+
+    context = {
+        'title': title,
+        'products': products,
+    }
+
+    return render(request, 'stepshop/index.html', context)
+
 
 def contacts(request):
-    return render(request, 'stepshop/contact.html')
+    title = 'контакты'
+
+    context = {
+        'title': title,
+    }
+
+    return render(request, 'stepshop/contact.html', context)
+
 
 def about(request):
-    return render(request, 'stepshop/about.html')
+    title = 'о нас'
+
+    context = {
+        'title': title,
+    }
+
+    return render(request, 'stepshop/about.html', context)
 
 
