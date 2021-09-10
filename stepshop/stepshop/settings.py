@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
 
     'mainapp',
+    'authapp',
 ]
 
 MIDDLEWARE = [
@@ -53,6 +54,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'stepshop.urls'
+
+AUTH_USER_MODEL = 'authapp.ShopUser'
 
 TEMPLATES = [
     {
