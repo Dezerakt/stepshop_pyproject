@@ -3,15 +3,15 @@
     "model": "mainapp.productcategory",
     "pk": 1,
     "fields": {
-      "name": "Бобры",
-      "description": "Трудяги ещё те"
+      "name": "Metal",
+      "description": ""
     }
   },
   {
     "model": "mainapp.productcategory",
     "pk": 2,
     "fields": {
-      "name": "Обувь",
+      "name": "Post-Punk",
       "description": ""
     }
   },
@@ -19,7 +19,7 @@
     "model": "mainapp.productcategory",
     "pk": 3,
     "fields": {
-      "name": "Штаны",
+      "name": "Rock",
       "description": ""
     }
   },
@@ -27,7 +27,7 @@
     "model": "mainapp.productcategory",
     "pk": 4,
     "fields": {
-      "name": "Смартфоны",
+      "name": "Shoegaze",
       "description": ""
     }
   }

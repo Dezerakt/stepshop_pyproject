@@ -7,11 +7,11 @@ def products(request):
     title = 'продукты | каталог'
 
     links_menu = [
-        {'href': 'products_all', 'name': 'все'},
-        {'href': 'products_shoes', 'name': 'обувь'},
-        {'href': 'products_pants', 'name': 'штаны'},
-        {'href': 'products_phones', 'name': 'смартфоны'},
-        {'href': 'products_parts', 'name': 'автозапчасти'},
+        {'href': 'products_all', 'name': 'Все'},
+        {'href': 'products_shoegaze', 'name': 'Shoegaze'},
+        {'href': 'products_rock', 'name': 'Rock'},
+        {'href': 'products_metal', 'name': 'Metal'},
+        {'href': 'products_postpunk', 'name': 'Post-Punk'},
     ]
 
     products_all = Product.objects.all()

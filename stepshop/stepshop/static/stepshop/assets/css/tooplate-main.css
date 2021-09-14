@@ -80,6 +80,7 @@ a {
 	border-bottom: 1px solid #eee;
 }
 #navbarResponsive {
+    justify-content: center;
 	/*z-index: 999;
 	position: absolute;
 	left: 50%;
@@ -129,15 +130,14 @@ a {
 	font-family: 'FontAwesome';
 }
 /* Banner Style */
-
-/*.banner {
-	margin-top: 50px;
+.banner {
+	/*margin-top: 50px;*/
 	background-image: url(../images/banner-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 150px 0px;
 	background-position: center center;
-}*/
+}
 .banner .caption {
 	background-color: rgba(250,250,250,0.9);
 	padding: 30px;

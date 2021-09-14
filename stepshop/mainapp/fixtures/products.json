@@ -1,77 +1,77 @@
 [
   {
     "model": "mainapp.product",
-    "pk": 1,
+    "pk": 6,
     "fields": {
       "category": 1,
-      "name": "Бобёр классический",
-      "image": "product_images/product-03.jpg",
-      "short_desc": "Обычный бобёр",
-      "description": "Строит плотины, приятный собеседник",
+      "name": "Woodscreams - Octastorium",
+      "image": "product_images/R-6407267-1596370850-2969.jpeg.jpg",
+      "short_desc": "Альбом в стиле Фолк-Метал",
+      "description": "Альбом от российской группы исполняющей в стиле фолк-метал. Краткие повести, женский вокал и жуткий гроул ждут вас тут вместе с персонажами славяно-скандинавской мифологии.",
       "price": "500.00",
       "quantity": 6,
-      "created_at": "2021-09-10T09:30:41.820",
-      "updated_at": "2021-09-10T09:30:41.820"
+      "created_at": "2021-09-13T21:54:48.005",
+      "updated_at": "2021-09-14T10:39:34.187"
     }
   },
   {
     "model": "mainapp.product",
-    "pk": 2,
+    "pk": 7,
     "fields": {
       "category": 2,
-      "name": "Кеды",
-      "image": "product_images/product-04.jpg",
-      "short_desc": "Кеды и кеды",
-      "description": "Продаются поштучно",
+      "name": "The End of Electronics - Safety Guidlines",
+      "image": "product_images/R-16064979-1602801220-4637.jpeg.jpg",
+      "short_desc": "Отличный пост-панковый альбом",
+      "description": "Отличный пост-панковый альбом от одного из лучших исполнителей по мнению автора. Шикарное ретро звучание между строк наполненных меланхоличными метафорами и аллегориями.",
       "price": "621.03",
       "quantity": 9,
-      "created_at": "2021-09-10T09:30:41.916",
-      "updated_at": "2021-09-10T09:30:41.916"
+      "created_at": "2021-09-13T21:54:48.023",
+      "updated_at": "2021-09-14T10:27:49.047"
     }
   },
   {
     "model": "mainapp.product",
-    "pk": 3,
+    "pk": 8,
     "fields": {
       "category": 3,
-      "name": "Синие джинсы",
-      "image": "product_images/product-02.jpg",
-      "short_desc": "Очень синие",
-      "description": "Сносу им нет, можно рельсы ложить в них",
+      "name": "Only You - Let Me Burn",
+      "image": "product_images/R-5004846-1381905456-5339.jpeg.jpg",
+      "short_desc": "Рок с блюзовым оттенком",
+      "description": "Отличный альбом от группы обладающей практически нулевой популярностью, рок с примесью блюза и женским вокалом",
       "price": "500.00",
       "quantity": 3,
-      "created_at": "2021-09-10T09:30:41.995",
-      "updated_at": "2021-09-10T09:30:41.995"
+      "created_at": "2021-09-13T21:54:48.060",
+      "updated_at": "2021-09-14T10:21:27.042"
     }
   },
   {
     "model": "mainapp.product",
-    "pk": 4,
-    "fields": {
-      "category": 2,
-      "name": "Моднявые кеды",
-      "image": "product_images/product-04.jpg",
-      "short_desc": "Очень красные",
-      "description": "Красота, ноги в них пахнут розочками",
-      "price": "250.00",
-      "quantity": 21,
-      "created_at": "2021-09-10T09:30:42.158",
-      "updated_at": "2021-09-10T09:30:42.158"
-    }
-  },
-  {
-    "model": "mainapp.product",
-    "pk": 5,
+    "pk": 9,
     "fields": {
       "category": 4,
-      "name": "XiaoMi MiMax 3",
-      "image": "",
-      "short_desc": "Лучший в своём классе",
+      "name": "Slowdive - Souvlaki",
+      "image": "product_images/220px-Souvlaki_album_cover.jpg",
+      "short_desc": "Мелодично, и с хорошим вокалом",
+      "description": "Популярнейший альбом группы Slowdive, и отличный представитель жанра Shoegaze",
+      "price": "250.00",
+      "quantity": 21,
+      "created_at": "2021-09-13T21:54:48.104",
+      "updated_at": "2021-09-14T10:14:18.306"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 10,
+    "fields": {
+      "category": 4,
+      "name": "My Bloody Valentine - Loveless",
+      "image": "product_images/274px-MyBloodyValentineLoveless.jpg",
+      "short_desc": "Спокойно и размерено",
       "description": "",
       "price": "253.00",
       "quantity": 7,
-      "created_at": "2021-09-10T09:30:42.251",
-      "updated_at": "2021-09-10T09:30:42.251"
+      "created_at": "2021-09-13T21:54:48.139",
+      "updated_at": "2021-09-14T10:12:41.653"
     }
   }
 ]
