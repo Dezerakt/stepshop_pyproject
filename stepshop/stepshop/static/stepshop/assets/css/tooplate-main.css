@@ -117,7 +117,7 @@ a {
 }
 .navbar-dark .navbar-toggler {
 	border-color: #3a8bcd;
-	background-color: #3a8bcd;	
+	background-color: #3a8bcd;
 	height: 50px;
 	outline: none;
 }
@@ -129,14 +129,15 @@ a {
 	font-family: 'FontAwesome';
 }
 /* Banner Style */
-.banner {
+
+/*.banner {
 	margin-top: 50px;
 	background-image: url(../images/banner-bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 150px 0px;
 	background-position: center center;
-}
+}*/
 .banner .caption {
 	background-color: rgba(250,250,250,0.9);
 	padding: 30px;
