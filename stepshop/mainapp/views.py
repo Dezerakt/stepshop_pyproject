@@ -1,25 +1,26 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
-from mainapp.models import Product
+from mainapp.models import Product, ProductCategory
 
 
-def products(request):
+def products(request, pk=None):
     title = 'продукты | каталог'
 
-    links_menu = [
-        {'href': 'products_all', 'name': 'Все'},
-        {'href': 'products_shoegaze', 'name': 'Shoegaze'},
-        {'href': 'products_rock', 'name': 'Rock'},
-        {'href': 'products_metal', 'name': 'Metal'},
-        {'href': 'products_postpunk', 'name': 'Post-Punk'},
-    ]
+    links_menu = ProductCategory.objects.all()
 
     products_all = Product.objects.all()
+    category = {'name': 'альбомы'}
+
+    if pk is not None:
+        products_all = Product.objects.filter(category__id=pk)
+        category = get_object_or_404(ProductCategory, id=pk)
 
     context = {
         'title': title,
         'links_menu': links_menu,
         'products': products_all,
+        'category': category,
+        'pk': pk,
     }
 
     return render(request, 'mainapp/products.html', context)

@@ -3,34 +3,15 @@
 
 {% block title %}Продукты{% endblock %}
 
-    {% block css %}
-        <link rel="stylesheet" href="/static/mainapp/style.css">
-    {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'mainapp/style.css' %}">
+{% endblock %}
 
 {% block content %}
 <!-- Page Content -->
+
 <!-- Items Starts Here -->
-<div class="featured-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
-                <div class="section-heading">
-                    <div class="line-dec"></div>
-                    <h1>Featured Items</h1>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-12">
-                <div id="filters" class="button-group">
-
-                    {% for item in links_menu %}
-                    <button class="btn btn-primary" data-filter="{{ item.href }}">{{ item.name }}</button>
-                    {% endfor %}
-
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{% include 'mainapp/includes/inc_category_menu.html' %}
 
 <div class="featured container no-gutter">
 
@@ -72,5 +53,5 @@
 {% endblock %}
 
 {% block js %}
-    <script src="/static/stepshop/assets/js/isotope.js"></script>
+<script src="/static/stepshop/assets/js/isotope.js"></script>
 {% endblock %}
