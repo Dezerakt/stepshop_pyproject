@@ -1,0 +1,22 @@
+[
+  {
+    "model": "authapp.shopuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$UswZe9TLE8vfuEy6K6hZPM$uRpJcLeqOlOwFaSzmAGUIsahGzJIArSKBFAcJrm2+f0=",
+      "last_login": "2021-09-14T11:16:16.565",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@stepshop.local",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-09-14T11:15:42.457",
+      "avatar": "",
+      "age": 25,
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

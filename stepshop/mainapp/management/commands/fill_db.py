@@ -30,7 +30,6 @@ class Command(BaseCommand):
         products = load_from_json('products.json')
 
         Product.objects.all().delete()
-        ShopUser.objects.all().delete()
 
         for product in products:
             _product = product.get('fields')
@@ -39,4 +38,10 @@ class Command(BaseCommand):
             new_product = Product(**_product)
             new_product.save()
 
-        ShopUser.objects.create_superuser('admin', 'admin@stepshop.local', '123', age='25')
+        users = load_from_json('users.json')
+        ShopUser.objects.all().delete()
+
+        for user in users:
+            _user = user.get('fields')
+            new_user = ShopUser(**_user)
+            new_user.save()
