@@ -3,10 +3,6 @@
 
 {% block title %}Продукты{% endblock %}
 
-{% block css %}
-<link rel="stylesheet" href="{% static 'mainapp/style.css' %}">
-{% endblock %}
-
 {% block content %}
 <!-- Page Content -->
 
@@ -19,7 +15,7 @@
 
         {% for product in products %}
         <div id="{{ product.id }}" class="item new col-md-4">
-            <a href="#">
+            <a href="{% url 'products:product' product.pk %}">
                 <div class="featured-item">
                     <img src="{% if product.image %}
                                 {{ product.image.url }}
@@ -50,8 +46,4 @@
     </div>
 </div>
 <!-- Featred Page Ends Here -->
-{% endblock %}
-
-{% block js %}
-<script src="/static/stepshop/assets/js/isotope.js"></script>
 {% endblock %}

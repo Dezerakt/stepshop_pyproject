@@ -43,9 +43,4 @@ class Command(BaseCommand):
 
         ShopUser.objects.all().delete()
 
-        # for user in users:
-        #     _user = user.get('fields')
-        #     new_user = ShopUser(**_user)
-        #     new_user.save()
-
-        ShopUser.objects.create_superuser('admin', 'admit@stepshop.local', age='25')
+        ShopUser.objects.create_superuser('admin', 'admit@stepshop.local', '123', age='25')
