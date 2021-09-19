@@ -64,6 +64,7 @@ def register(request):
 
 def edit(request):
     title = 'редактирование'
+
     if request.method == 'POST':
         edit_form = ShopUserEditForm(request.POST, request.FILES, instance=request.user)
 
@@ -72,11 +73,11 @@ def edit(request):
             return HttpResponseRedirect(reverse('auth:edit'))
 
     else:
-        edit_form = ShopUserEditForm()
+        edit_form = ShopUserEditForm(instance=request.user)
 
     context = {
         'title': title,
-        'register_form': edit_form,
+        'edit_form': edit_form,
     }
 
     return render(request, 'authapp/edit.html', context)
