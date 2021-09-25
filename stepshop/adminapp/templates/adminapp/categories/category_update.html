@@ -1,0 +1,20 @@
+{% extends 'adminapp/base.html' %}
+{% load static %}
+{% load default_image_tags %}
+
+{% block content %}
+<div class="row">
+    <div class="user_avatar">
+        <img src="/media/{{ user.avatar|default_avatar_image }}" alt="{{ user.username }}">
+    </div>
+</div>
+<div class="mx-auto col-3">
+    <form class="form-horizontal"
+          method="post"
+          enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ edit_form.as_p }}
+        <input class="form-control" type="submit" value="Сохранить">
+    </form>
+</div>
+{% endblock %}
