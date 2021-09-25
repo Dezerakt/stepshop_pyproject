@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="basket_summary">
+    <div>Общее количество товаров: <strong>{{ basket.0.total_quantity }} шт.</strong></div>
+    <div>Общая стоимость: <strong>{{ basket.0.total_cost|floatformat:2 }}</strong></div>
+</div>

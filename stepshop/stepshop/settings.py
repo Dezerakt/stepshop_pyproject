@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'mainapp',
     'authapp',
     'basketapp',
+    'adminapp',
 ]
 
 MIDDLEWARE = [
@@ -126,9 +127,11 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'stepshop', 'static'),
     os.path.join(BASE_DIR, 'mainapp', 'static'),
+    os.path.join(BASE_DIR, 'basketapp', 'static'),
 )
 
 MEDIA_URL = '/media/'

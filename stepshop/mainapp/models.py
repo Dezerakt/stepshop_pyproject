@@ -13,6 +13,11 @@ class ProductCategory(models.Model):
         blank=True,
     )
 
+    is_active = models.BooleanField(
+        default=True,
+        verbose_name='Активный',
+    )
+
     def __str__(self):
         return self.name or f'Id категории - {self.pk}'
 
@@ -60,6 +65,11 @@ class Product(models.Model):
     quantity = models.PositiveIntegerField(
         verbose_name='количество товара на складе',
         default=0,
+    )
+
+    is_active = models.BooleanField(
+        default=True,
+        verbose_name='Активный',
     )
 
     created_at = models.DateTimeField(auto_now_add=True)

@@ -2,9 +2,8 @@ from django.contrib import auth
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 
-from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
 
-# Create your views here.
+from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
 from django.urls import reverse
 
 
@@ -12,7 +11,6 @@ def login(request):
     title = 'вход'
 
     login_form = ShopUserLoginForm(data=request.POST)
-
     _next = request.GET['next'] if 'next' in request.GET.keys() else ''
 
     if request.method == 'POST' and login_form.is_valid():

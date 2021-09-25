@@ -42,33 +42,44 @@ https://www.tooplate.com/view/2114-pixie
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                {% if user.is_authenticated %}
-                <span>
-                    <a href="{% url 'auth:edit' %}" style="color:white; font-size:30px; font-family:monospace">
-                        {{ user.first_name|default:user.username }}
-                    </a>
-                </span>
-                <span>
-                     <a href="{% url 'auth:logout' %}" style="color:white; font-size:30px; font-family:monospace">
-                        Выйти
-                    </a>
-                </span>
-                {% else %}
-                <span>
-                     <a href="{% url 'auth:login' %}" style="color:white; font-size:30px; font-family:monospace">
-                        Войти
-                    </a>
-                </span>
+
+                {% if user.is_staff %}
+                <a href="{% url 'admin_staff:users' %}" class="admin-panel"></a>
+                {% elif user.is_superuser %}
+                 <a href="{% url 'admin_staff:users' %}" class="admin-panel"></a>
                 {% endif %}
 
                 {% if user.is_authenticated %}
-                <a href="{% url 'basket:view' %}" class="basket">
-                    {% if basket %}
-                    <span>{{ basket.0.total_quantity }}</span>
-                    {% endif %}
-                </a>
+<!--                <span>-->
+<!--                    <a href="{% url 'auth:edit' %}" style="color:white; font-family:monospace">-->
+<!--                        {{ user.first_name|default:user.username }}-->
+<!--                    </a>-->
+<!--                </span>-->
+                <a href="{% url 'auth:edit' %}" class="edit-panel"></a>
+<!--                <span>-->
+<!--                     <a href="{% url 'auth:logout' %}" style="color:white; font-family:monospace">-->
+<!--                        Выйти-->
+<!--                    </a>-->
+<!--                </span>-->
+                <a href="{% url 'auth:logout' %}" class="logout-panel"></a>
+                {% else %}
+<!--                <span>-->
+<!--                     <a href="{% url 'auth:login' %}" style="color:white; font-family:monospace">-->
+<!--                        Войти-->
+<!--                    </a>-->
+<!--                </span>-->
+                <a href="{% url 'auth:login' %}" class="logout-panel"></a>
+                {% endif %}
 
-                <span class="price">{{ basket.0.total_cost|floatformat:0 }}$</span>
+                {% if basket %}
+                    {% if user.is_authenticated %}
+                        {% if basket.0.total_quantity > 0 %}
+                            <a href="{% url 'basket:view' %}" class="basket">
+                                <span>{{ basket.0.total_quantity }}</span>
+                            </a>
+                            <span class="price">{{ basket.0.total_cost|floatformat:0 }}$</span>
+                        {% endif %}
+                    {% endif %}
                 {% endif %}
             </div>
         </div>
@@ -109,6 +120,7 @@ https://www.tooplate.com/view/2114-pixie
 <script src="{% static '/stepshop/assets/js/custom.js' %}"></script>
 <script src="{% static '/stepshop/assets/js/owl.js' %}"></script>
 
+
 <script language="text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
       function clearField(t){                   //declaring the array outside of the
@@ -118,6 +130,7 @@ https://www.tooplate.com/view/2114-pixie
           t.style.color='#fff';
           }
       }
+
 
 
 

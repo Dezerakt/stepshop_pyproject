@@ -1,0 +1,322 @@
+[
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Woodscreams - Octastorium",
+      "image": "product_images/R-6407267-1596370850-2969.jpeg.jpg",
+      "short_desc": "Альбом в стиле Фолк-Метал",
+      "description": "Альбом от российской группы исполняющей в стиле фолк-метал. Краткие повести, женский вокал и жуткий гроул ждут вас тут вместе с персонажами славяно-скандинавской мифологии.",
+      "price": "500.00",
+      "quantity": 6,
+      "is_active": true,
+      "created_at": "2021-09-16T19:41:48.953",
+      "updated_at": "2021-09-16T19:41:48.953"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 2,
+      "name": "The End of Electronics - Safety Guidlines",
+      "image": "product_images/R-16064979-1602801220-4637.jpeg.jpg",
+      "short_desc": "Отличный пост-панковый альбом",
+      "description": "Отличный пост-панковый альбом от одного из лучших исполнителей по мнению автора. Шикарное ретро звучание между строк наполненных меланхоличными метафорами и аллегориями.",
+      "price": "621.03",
+      "quantity": 9,
+      "is_active": true,
+      "created_at": "2021-09-16T19:41:48.986",
+      "updated_at": "2021-09-16T19:41:48.986"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 3,
+      "name": "Only You - Let Me Burn",
+      "image": "product_images/R-5004846-1381905456-5339.jpeg.jpg",
+      "short_desc": "Рок с блюзовым оттенком",
+      "description": "Отличный альбом от группы обладающей практически нулевой популярностью, рок с примесью блюза и женским вокалом",
+      "price": "500.00",
+      "quantity": 3,
+      "is_active": true,
+      "created_at": "2021-09-16T19:41:49.005",
+      "updated_at": "2021-09-16T19:41:49.005"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 4,
+      "name": "Slowdive - Souvlaki",
+      "image": "product_images/220px-Souvlaki_album_cover.jpg",
+      "short_desc": "Мелодично, и с хорошим вокалом",
+      "description": "Популярнейший альбом группы Slowdive, и отличный представитель жанра Shoegaze",
+      "price": "250.00",
+      "quantity": 21,
+      "is_active": true,
+      "created_at": "2021-09-16T19:41:49.022",
+      "updated_at": "2021-09-16T19:41:49.022"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 5,
+    "fields": {
+      "category": 4,
+      "name": "My Bloody Valentine - Loveless",
+      "image": "product_images/274px-MyBloodyValentineLoveless.jpg",
+      "short_desc": "Спокойно и размерено",
+      "description": "",
+      "price": "253.00",
+      "quantity": 7,
+      "is_active": true,
+      "created_at": "2021-09-16T19:41:49.046",
+      "updated_at": "2021-09-16T19:41:49.046"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "name": "Ne Obliviscaris ‎– Citadel",
+      "image": "product_images/R-6284810-1415564343-3961.jpeg.jpg",
+      "short_desc": "Альбом в жанре Progressive Metal",
+      "description": "Альбом в жанре Progressive Metal",
+      "price": "520.00",
+      "quantity": 12,
+      "is_active": true,
+      "created_at": "2021-09-25T13:33:12.779",
+      "updated_at": "2021-09-25T13:33:12.779"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "name": "Fleshgod Apocalypse – Agony",
+      "image": "product_images/R-4588910-1369239968-1685.jpeg.jpg",
+      "short_desc": "Альбом в жанре Death Metal",
+      "description": "Альбом в жанре Death Metal",
+      "price": "620.00",
+      "quantity": 3,
+      "is_active": true,
+      "created_at": "2021-09-25T13:35:15.120",
+      "updated_at": "2021-09-25T13:35:15.120"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 8,
+    "fields": {
+      "category": 1,
+      "name": "Demon Hunter - Demon Hunter",
+      "image": "product_images/R-1181498-1552145387-6959.jpeg.jpg",
+      "short_desc": "Альбом в жанре Nu-Metal",
+      "description": "Альбом в жанре Nu-Metal",
+      "price": "750.00",
+      "quantity": 9,
+      "is_active": true,
+      "created_at": "2021-09-25T13:38:46.199",
+      "updated_at": "2021-09-25T13:45:36.011"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 9,
+    "fields": {
+      "category": 3,
+      "name": "Nirvana ‎– Nevermind",
+      "image": "product_images/R-367084-1263095553.jpeg.jpg",
+      "short_desc": "Grunge",
+      "description": "Grunge",
+      "price": "500.00",
+      "quantity": 6,
+      "is_active": true,
+      "created_at": "2021-09-25T13:43:04.383",
+      "updated_at": "2021-09-25T13:43:04.383"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 10,
+    "fields": {
+      "category": 3,
+      "name": "Guns N' Roses ‎– G N' R Lies",
+      "image": "product_images/R-8138085-1529629239-3416.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "555.00",
+      "quantity": 23,
+      "is_active": true,
+      "created_at": "2021-09-25T13:51:27.623",
+      "updated_at": "2021-09-25T13:51:27.623"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 11,
+    "fields": {
+      "category": 3,
+      "name": "Queen ‎– Queen",
+      "image": "product_images/R-847206-1453591411-7278.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "236.00",
+      "quantity": 3,
+      "is_active": true,
+      "created_at": "2021-09-25T13:53:20.348",
+      "updated_at": "2021-09-25T13:53:20.348"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 12,
+    "fields": {
+      "category": 3,
+      "name": "Deep Purple ‎– Fireball",
+      "image": "product_images/R-469215-1353408727-4700.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "265.00",
+      "quantity": 4,
+      "is_active": true,
+      "created_at": "2021-09-25T13:55:23.510",
+      "updated_at": "2021-09-25T13:55:23.510"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 13,
+    "fields": {
+      "category": 1,
+      "name": "Rammstein ‎– Sehnsucht",
+      "image": "product_images/R-107838-1620064993-2402.png.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "453.00",
+      "quantity": 5,
+      "is_active": true,
+      "created_at": "2021-09-25T13:56:52.302",
+      "updated_at": "2021-09-25T13:56:52.302"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 14,
+    "fields": {
+      "category": 2,
+      "name": "Кино ‎– 45",
+      "image": "product_images/R-2416715-1503268453-5482.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "223.00",
+      "quantity": 7,
+      "is_active": true,
+      "created_at": "2021-09-25T13:58:33.095",
+      "updated_at": "2021-09-25T13:58:33.095"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 15,
+    "fields": {
+      "category": 2,
+      "name": "Сплин ‎– Гранатовый Альбом",
+      "image": "product_images/R-1973997-1281466216.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "356.00",
+      "quantity": 6,
+      "is_active": true,
+      "created_at": "2021-09-25T14:00:34.343",
+      "updated_at": "2021-09-25T14:00:34.343"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 16,
+    "fields": {
+      "category": 4,
+      "name": "Lush ‎– Spooky",
+      "image": "product_images/R-388489-1495482918-2958.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "920.00",
+      "quantity": 2,
+      "is_active": true,
+      "created_at": "2021-09-25T14:05:28.874",
+      "updated_at": "2021-09-25T14:05:32.440"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 17,
+    "fields": {
+      "category": 4,
+      "name": "Drop Nineteens - National Coma",
+      "image": "product_images/R-885673-1191794244.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "332.00",
+      "quantity": 3,
+      "is_active": true,
+      "created_at": "2021-09-25T14:07:26.575",
+      "updated_at": "2021-09-25T14:07:26.575"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 18,
+    "fields": {
+      "category": 4,
+      "name": "Pinkshinyultrablast ‎– Miserable Miracles",
+      "image": "product_images/R-11949362-1525293496-9842.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "523.00",
+      "quantity": 7,
+      "is_active": true,
+      "created_at": "2021-09-25T14:12:55.735",
+      "updated_at": "2021-09-25T14:12:55.735"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 19,
+    "fields": {
+      "category": 2,
+      "name": "Молчат Дома - Этажи",
+      "image": "product_images/R-12450303-1538500028-8823.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "236.00",
+      "quantity": 3,
+      "is_active": true,
+      "created_at": "2021-09-25T14:14:54.632",
+      "updated_at": "2021-09-25T14:14:54.632"
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 20,
+    "fields": {
+      "category": 2,
+      "name": "Ploho ‎– Бумажные Бомбы",
+      "image": "product_images/R-11079346-1509466198-1068.jpeg.jpg",
+      "short_desc": "",
+      "description": "",
+      "price": "568.00",
+      "quantity": 3,
+      "is_active": true,
+      "created_at": "2021-09-25T14:16:04.058",
+      "updated_at": "2021-09-25T14:16:04.058"
+    }
+  }
+]

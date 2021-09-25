@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
+from django.template.loader import render_to_string
 from django.urls import reverse
 
 from basketapp.models import Basket
@@ -10,10 +11,14 @@ from mainapp.models import Product
 @login_required()
 def basket(request):
     if request.user.is_authenticated:
-        basket_obj = Basket.objects.filter(user=request.user)
+        basket_item = Basket.objects.filter(user=request.user)
+
+        for item in basket_item:
+            item.product_total_price = item.product.price * item.quantity
 
         context = {
-            'basket': basket_obj,
+            'basket': basket_item,
+
         }
 
         return render(request, 'basketapp/basket.html', context)
@@ -36,6 +41,31 @@ def basket_add(request, pk):
     basket.save()
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+
+
+@login_required
+def basket_edit(request, pk, quantity):
+    if request.is_ajax():
+        quantity = int(quantity)
+        basket_item = Basket.objects.get(pk=int(pk))
+
+        if quantity > 0:
+            basket_item.quantity = quantity
+            basket_item.save()
+        else:
+            basket_item.delete()
+
+        basket = Basket.objects.filter(user=request.user).order_by('product__category')
+
+        product_total_price = basket_item.product.price * basket_item.quantity
+
+        context = {
+            'basket': basket,
+        }
+
+        result = render_to_string('basketapp/includes/inc_basket_list.html', context)
+
+        return JsonResponse({'result': result, 'product_total_price': product_total_price})
 
 
 @login_required
