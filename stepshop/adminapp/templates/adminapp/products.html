@@ -1,5 +1,7 @@
 {% extends 'adminapp/base.html' %}
 {% load static %}
+{% load default_image_tags %}
+
 
 {% block content %}
 <main>
@@ -8,7 +10,7 @@
         <div class="card mb-4">
             <div class="card-header">
                 <i class="fa fa-table mr-1"></i>
-                Треки жанра {{ category.name }}
+                Продукты категории {{ category.name }}
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -24,27 +26,51 @@
                         </tr>
                         </thead>
                         <tbody>
-                        {% for product in objects %}
-                        <tr {% if not product.is_active %} style="opacity: 0.5;" {% endif %}>
-                            <td><a href="{#% url 'admin_staff:product_update' product.id %#}"
-                                   style="color: dodgerblue">{{ product.name }}</a></td>
-                            <td>{{ product.short_desc }}</td>
-                            <td>{{ product.quantity }}</td>
-                            <td>{{ product.price }}</td>
-                            <td>
-                                <a href="{#% url 'admin_staff:product_update' pk=product.pk %#}">
-                                    <i class="fa fa-edit-circle"></i>
-                                </a>
-                            </td>
-                        </tr>
+                        {% for product in product_list %}
+                            <tr {% if not product.is_active %} style="opacity: 0.5;" {% endif %}>
+                                <td><a href="{% url 'admin_staff:product_read' product.id %}"
+                                       style="color: dodgerblue">{{ product.name }}</a></td>
+                                <td>{{ product.short_desc }}</td>
+                                <td>{{ product.quantity }}</td>
+                                <td>${{ product.price }}</td>
+                                <td>
+                                    <a href="{% url 'admin_staff:product_update' pk=product.id %}">
+                                        Редактировать
+                                    </a>
+                                </td>
+                                <td>
+                                    <a {% if not product.is_active %}class="invisible" {% endif %}
+                                       href="{% url 'admin_staff:product_delete' pk=product.id %}">
+                                        Удалить
+                                    </a>
+                                </td>
+                            </tr>
                         {% endfor %}
                         </tbody>
                     </table>
                 </div>
+
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if page_obj.has_previous %}
+                            <a href="?page=1">&laquo; первая</a> |
+                            <a href="?page={{ page_obj.previous_page_number }}">предыдущая</a>
+                        {% endif %}
+
+                        <span class="current">
+                            | Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }} |
+                        </span>
+
+                        {% if page_obj.has_next %}
+                            <a href="?page={{ page_obj.next_page_number }}">следующая</a> |
+                            <a href="?page={{ page_obj.paginator.num_pages }}">последняя &raquo;</a>
+                        {% endif %}
+                    </span>
+                </div>
             </div>
             <div class="card-footer">
-                <a href="{#% url 'adminapp:category_create' %#}">
-                    <button class="btn btn-success">Создать категорию</button>
+                <a href="{% url 'adminapp:product_create' category.pk %}">
+                    <button class="btn btn-success">Создать продукт</button>
                 </a>
             </div>
         </div>

@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
 from mainapp.models import Product, ProductCategory
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from basketapp.models import Basket
 
 
@@ -15,29 +15,37 @@ def get_basket(user_):
 
 
 def get_same_product(current_product):
-    return Product.objects.filter(category=current_product.category).exclude(id=current_product.id)
+    return Product.objects.filter(category=current_product.category, is_active=True).exclude(id=current_product.id)
 
 
-def products(request, pk=None):
+def products(request, pk=None, page=1):
     title = 'продукты | каталог'
 
     links_menu = ProductCategory.objects.filter(is_active=True)
 
-    products_all = Product.objects.filter(category__is_active=True)
+    products_all = Product.objects.filter(category__is_active=True, is_active=True)
     category = {'name': 'альбомы'}
 
-    if pk is not None and ProductCategory.objects.get(id=pk, is_active=True):
-        products_all = Product.objects.filter(category__id=pk)
+    if pk is not None:
+        products_all = Product.objects.filter(is_active=True, category__id=pk)
         category = get_object_or_404(ProductCategory, id=pk)
         if not category.is_active:
             return HttpResponseRedirect(reverse('products:index'))
 
     basket = get_basket(request.user)
 
+    paginator = Paginator(products_all, 6)
+    try:
+        products_paginator = paginator.page(page)
+    except PageNotAnInteger:
+        products_paginator = paginator.page(1)
+    except EmptyPage:
+        products_paginator = paginator.page(paginator.num_pages)
+
     context = {
         'title': title,
         'links_menu': links_menu,
-        'products': products_all,
+        'products': products_paginator,
         'category': category,
         'pk': pk,
         'basket': basket,
@@ -53,7 +61,7 @@ def product(request, pk):
     product_item = get_object_or_404(Product, id=pk)
 
     category = product_item.category
-    if not category.is_active:
+    if not category.is_active or not product_item.is_active:
         return HttpResponseRedirect(reverse('products:index'))
 
     basket = get_basket(request.user)
@@ -68,3 +76,4 @@ def product(request, pk):
     }
 
     return render(request, 'mainapp/product.html', context)
+

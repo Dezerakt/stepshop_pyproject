@@ -3,10 +3,8 @@
 
 {% block content %}
     <div class="mx-auto col-3">
-        <form class="form-horizontal"
-              action="{% url 'admin_staff:user_create' %}"
-              method="post"
-              enctype="multipart/form-data">
+        <form action="{% url 'admin_staff:product_create' category.pk %}" class="form-horizontal"
+        method="post" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
 

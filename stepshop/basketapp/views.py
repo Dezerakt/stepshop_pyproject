@@ -18,7 +18,6 @@ def basket(request):
 
         context = {
             'basket': basket_item,
-
         }
 
         return render(request, 'basketapp/basket.html', context)

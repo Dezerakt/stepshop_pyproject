@@ -3,18 +3,22 @@
 {% load default_image_tags %}
 
 {% block content %}
-<div class="row">
-    <div class="user_avatar">
-        <img src="/media/{{ edit_user.avatar|default_avatar_image }}" alt="{{ user.username }}">
+    <div class="mx-auto col-3">
+        <div class="row">
+            <div class="user_avatar">
+                <img src="{{ user.avatar|default_avatar_image }}" alt="{{ user.username }}" class="rounded-circle" width="60px">
+            </div>
+        </div>
+        <form class="form-horizontal"
+              method="post"
+              enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input class="form-control" type="submit" value="Сохранить">
+        </form>
+        <button class="btn btn-round form-control last">
+            <a href="{% url 'admin_staff:users' %}">Отмена</a>
+        </button>
     </div>
-</div>
-<div class="mx-auto col-3">
-    <form class="form-horizontal"
-          method="post"
-          enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ edit_form.as_p }}
-        <input class="form-control" type="submit" value="Сохранить">
-    </form>
-</div>
 {% endblock %}
